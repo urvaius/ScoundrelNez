@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using ButterFlyGameNez.Scenes;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Nez;
@@ -9,13 +10,15 @@ namespace ScoundrelNez
     /// </summary>
     public class Game1 : Nez.Core
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        Scene startScene;
+        //GraphicsDeviceManager graphics;
+        //SpriteBatch spriteBatch;
         
         public Game1() : base ( width: 1280, height: 768, isFullScreen: false, enableEntitySystems: false)
         {
-           // graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
+            // graphics = new GraphicsDeviceManager(this);
+            // Content.RootDirectory = "Content";
+            Core.defaultSamplerState = SamplerState.LinearClamp;
         }
 
         /// <summary>
@@ -30,8 +33,10 @@ namespace ScoundrelNez
 
             base.Initialize();
             Window.AllowUserResizing = true;
-            var myScene = Scene.createWithDefaultRenderer(Color.ForestGreen);
-            scene = myScene;
+            startScene = new HomeScene();
+            scene = startScene;
+           // var myScene = Scene.createWithDefaultRenderer(Color.ForestGreen);
+            //scene = myScene;
         }
 
         /// <summary>

@@ -42,9 +42,18 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Components\SimpleMover.cs" />
+    <Compile Include="ContentPathGenerator.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentPathGenerator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Player.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\HomeScene.cs" />
+    <Compile Include="Scenes\StartScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -58,6 +67,16 @@
     <EmbeddedResource Include="Icon.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContentPathGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ContentPathGenerator.cs</LastGenOutput>
+    </Content>
+    <Content Include="Content\Textures\butterfly1.png" />
+    <Content Include="Content\Textures\caveman.png" />
+    <Content Include="Content\Textures\powerup.png" />
+    <Content Include="Content\Tiled\medieval_tilesheet.png" />
+    <Content Include="Content\Tiled\tileset.png" />
+    <Content Include="Content\Tiled\tilesheet_complete.png" />
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\x86\SDL2.dll">
       <Link>x86\SDL2.dll</Link>
@@ -203,12 +222,23 @@
     <Content Include="Content\nez\effects\Vignette.mgfxo">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Content\Tiled\rtsmedftesting.tmx" />
+    <None Include="Content\Tiled\tiledMap.tmx" />
+    <None Include="Content\Tiled\tiledMapnew.tmx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nez-master\Nez.Portable\Nez.csproj">
       <Project>{60b7197d-d0d5-405c-90a2-a56903e9b039}</Project>
       <Name>Nez</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="Content\Tiled\rtsmed2.tsx" />
+    <TypeScriptCompile Include="Content\Tiled\tilesheet_complete.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
