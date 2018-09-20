@@ -10,7 +10,7 @@ using System.Text;
 using ButterFlyGameNez.Entities;
 using System.Threading.Tasks;
 
-namespace ButterFlyGameNez.Scenes
+namespace ScoundrelNez.Scenes
 {
     public class HomeScene : Scene
     {

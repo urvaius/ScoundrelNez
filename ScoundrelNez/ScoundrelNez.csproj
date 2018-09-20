@@ -52,7 +52,9 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\BaseScene.cs" />
     <Compile Include="Scenes\HomeScene.cs" />
+    <Compile Include="Scenes\MenuScene.cs" />
     <Compile Include="Scenes\StartScene.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,7 +75,9 @@
     </Content>
     <Content Include="Content\Textures\butterfly1.png" />
     <Content Include="Content\Textures\caveman.png" />
-    <Content Include="Content\Textures\powerup.png" />
+    <Content Include="Content\Textures\powerup.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Tiled\medieval_tilesheet.png" />
     <Content Include="Content\Tiled\tileset.png" />
     <Content Include="Content\Tiled\tilesheet_complete.png" />
@@ -220,6 +224,39 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\nez\effects\Vignette.mgfxo">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\gooCursor.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\heatDistortionNoise.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\angular.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\crissCross.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\diagonalDistort.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\horizontal.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\noise.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\pokemon.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\sawTooth.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\spiral.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\nez\Textures\textureWipeTransition\wink.xnb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Content\Tiled\rtsmedftesting.tmx" />
