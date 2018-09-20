@@ -23,14 +23,11 @@ namespace ScoundrelNez.Scenes
         public override void initialize()
         {
             base.initialize();
-            //var texture = content.Load<Texture2D>(@"Textures\butterfly1");
-            //var entityOne = createEntity("butterfly");
-            //entityOne.addComponent(new Sprite(texture));
-            //load all. 
+            
             // setDesignResolution(640, 480, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
             //Screen.setSize(640 * 2, 480 * 2);
             setDesignResolution(1280, 768, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
-            Screen.setSize(1280 , 768 );
+            //Screen.setSize(1280 , 768 );
 
             var tiledEntity = createEntity("tiled-map-entity");
             var tiledMap = content.Load<TiledMap>(Content.Tiled.tiledMapnew);
