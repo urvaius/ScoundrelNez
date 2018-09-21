@@ -12,13 +12,11 @@ namespace ScoundrelNez
     {
         Scene startScene;
         Scene.SceneResolutionPolicy policy;
-        //GraphicsDeviceManager graphics;
-        //SpriteBatch spriteBatch;
+        
         
         //public Game1() : base ( width: 1280, height: 768, isFullScreen: false, enableEntitySystems: false)
         //{
-        //    // graphics = new GraphicsDeviceManager(this);
-        //    // Content.RootDirectory = "Content";
+        
         //    Core.defaultSamplerState = SamplerState.LinearClamp;
         //}
         public Game1() : base()
@@ -28,12 +26,7 @@ namespace ScoundrelNez
             Screen.setSize(640 * 2, 480 * 2);
             Window.AllowUserResizing = true;
         }
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
+        
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
