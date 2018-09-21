@@ -43,12 +43,12 @@ namespace ButterFlyGameNez.Entities
             //switch to a buterfly animation when get one.
             //var texture = entity.scene.content.Load<Texture2D>(Content.Textures.butterfly1);
 
-            var texture = entity.scene.content.Load<Texture2D>(Content.Textures.caveman);
+            var textureCaveman = entity.scene.content.Load<Texture2D>(Content.Textures.caveman);
             _boxCollider = entity.getComponent<BoxCollider>();
             //_mover = entity.getComponent<TiledMapMover>();
             _mover = entity.addComponent(new Mover());
 
-            var subtextures = Subtexture.subtexturesFromAtlas(texture, 32, 32);
+            var subtextures = Subtexture.subtexturesFromAtlas(textureCaveman, 32, 32);
 
             _animation = entity.addComponent(new Sprite<Animations>(subtextures[0]));
             //extract the animations from the atlas they are setup in rows with 8 columns

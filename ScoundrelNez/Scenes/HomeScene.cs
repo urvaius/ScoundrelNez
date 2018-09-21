@@ -14,12 +14,16 @@ namespace ScoundrelNez.Scenes
 {
     public class HomeScene : Scene
     {
+        Entity playerEntity;
+        Entity door;
+        
         public HomeScene()
         {
+            
             clearColor = Color.DarkGreen;
             addRenderer(new DefaultRenderer(0, null));
         }
-
+        
         public override void initialize()
         {
             base.initialize();
@@ -38,8 +42,13 @@ namespace ScoundrelNez.Scenes
             var spawnObject = objectLayer.objectWithName("spawn");
             var tiledMapComponent = tiledEntity.addComponent(new TiledMapComponent(tiledMap, "main"));
 
-            var playerEntity = createEntity("player", new Vector2(spawnObject.x, spawnObject.y));
+            playerEntity = createEntity("player", new Vector2(spawnObject.x, spawnObject.y));
 
+            door = createEntity("door", new Vector2(200, 200));
+            var doorTexture = content.Load<Texture2D>(Content.Textures.powerup);
+            door.addComponent(new Sprite(doorTexture));
+            door.addComponent(new BoxCollider());
+            
             //var playerEntity = createEntity("player", new Vector2(200, 200));
 
             playerEntity.addComponent(new Player());
@@ -48,6 +57,15 @@ namespace ScoundrelNez.Scenes
 
 
 
+        }
+        public override void update()
+        {
+            base.update();
+            if ( playerEntity.getComponent<BoxCollider>().collidesWith( door.getComponent<BoxCollider>(),out CollisionResult result))
+                {
+                Debug.log("collisoin result : {0}", result);
+                    
+                }
         }
     }
 }
