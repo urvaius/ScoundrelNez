@@ -11,6 +11,7 @@ namespace ScoundrelNez
     public class Game1 : Nez.Core
     {
         Scene startScene;
+        Scene.SceneResolutionPolicy policy;
         //GraphicsDeviceManager graphics;
         //SpriteBatch spriteBatch;
         
@@ -20,9 +21,12 @@ namespace ScoundrelNez
         //    // Content.RootDirectory = "Content";
         //    Core.defaultSamplerState = SamplerState.LinearClamp;
         //}
-        public Game1()
+        public Game1() : base()
         {
-
+            policy = Scene.SceneResolutionPolicy.ShowAll;
+            Scene.setDefaultDesignResolution(640, 480, policy);
+            Screen.setSize(640 * 2, 480 * 2);
+            Window.AllowUserResizing = true;
         }
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -35,7 +39,7 @@ namespace ScoundrelNez
             // TODO: Add your initialization logic here
 
             base.Initialize();
-            Window.AllowUserResizing = true;
+            
             //startScene = new HomeScene();
             startScene = new MenuScene();
             scene = startScene;

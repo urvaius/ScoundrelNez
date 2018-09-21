@@ -26,7 +26,8 @@ namespace ScoundrelNez.Scenes
             
             // setDesignResolution(640, 480, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
             //Screen.setSize(640 * 2, 480 * 2);
-            setDesignResolution(1280, 768, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
+            //put this in game 1 file
+            //setDesignResolution(1280, 768, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
             //Screen.setSize(1280 , 768 );
 
             var tiledEntity = createEntity("tiled-map-entity");
